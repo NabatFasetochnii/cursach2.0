@@ -1,0 +1,154 @@
+%%
+%% This is file `titledefs.rtx',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% titledefs.dtx  (with options: `titledefs')
+%% 
+%% Copyright (c) 2004-2009 Stanislav Kruchinin.
+%% All rights reserved.
+%% 
+%% This file is part of the disser package.
+%% 
+
+\ProvidesFile{titledefs.rtx}
+%Допуск к защите
+\def\approved{\CYRD\cyro\cyrp\cyru\cyrs\cyrt\cyri\cyrt\cyrsftsn\ \cyrk\ \cyrz\cyra\cyrshch\cyri\cyrt\cyre}
+%Оценка
+\def\mark{\CYRO\cyrc\cyre\cyrn\cyrk\cyra}
+
+\def\comission{\CYRCH\cyrl\cyre\cyrn\cyrery\
+\cyrk\cyro\cyrm\cyri\cyrs\cyrs\cyri\cyri}
+\def\apposchair{\cyr\CYRZ\cyra\cyrv.\ \cyrk\cyra\cyrf\cyre\cyrd\cyrr\cyro\cyrishrt}
+\def\apposdep{\cyr\CYRD\cyri\cyrr\cyre\cyrk\cyrt\cyro\cyrr\ \cyrd\cyre\cyrp\cyra\cyrr\cyrt\cyra\cyrm\cyre\cyrn\cyrt\cyra}
+
+%Студент
+\def\studentname{\CYRS\cyrt\cyru\cyrd\cyre\cyrn\cyrt}
+\def\studentsep{:~}
+\def\studentlabel{\studentname\studentsep}
+
+%Группа
+\def\groupname{\CYRG\cyrr\cyru\cyrp\cyrp\cyra}
+\def\groupsep{:~}
+\def\grouplabel{\groupname\groupsep}
+
+\def\comission{\CYRCH\cyrl\cyre\cyrn\cyrery\
+\cyrk\cyro\cyrm\cyri\cyrs\cyrs\cyri\cyri}
+\def\apposchair{\cyr\CYRZ\cyra\cyrv.\ \cyrk\cyra\cyrf\cyre\cyrd\cyrr\cyro\cyrishrt}
+\def\apposdep{\cyr\CYRD\cyri\cyrr\cyre\cyrk\cyrt\cyro\cyrr\ \cyrd\cyre\cyrp\cyra\cyrr\cyrt\cyra\cyrm\cyre\cyrn\cyrt\cyra}
+
+%Кафедра
+\def\chairname{\CYRK\cyra\cyrf\cyre\cyrd\cyrr\cyra}
+\def\chairsep{~}
+\def\chairlabel{\chairname\chairsep}
+
+%Департамент
+\def\departmentname{\CYRD\cyre\cyrp\cyra\cyrt\cyra\cyrm\cyre\cyrn\cyrt}
+\def\departmentsep{~}
+\def\departmentlabel{\departmentname\departmentsep}
+
+%Направление подготовки
+\def\coursename{\cyr\CYRN\cyra\cyrp\cyrr\cyra\cyrv\cyrl\cyre\cyrn\cyri\cyre\ \cyrp\cyro\cyrd\cyrg\cyro\cyrt\cyro\cyrv\cyrk\cyri}
+\def\coursesep{~}
+\def\courselabel{\coursename\coursesep}
+
+%Образовательная программа
+\def\profilename{\cyr\CYRO\cyrb\cyrr\cyra\cyrz\cyro\cyrv\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrn\cyra\cyrya\ \cyrp\cyrr\cyro\cyrg\cyra\cyrm\cyrm\cyra}
+\def\profilesep{~}
+\def\profilelabel{\profilename\profilesep}
+
+%Специальность
+\def\specialityname{\cyr\CYRS\cyrp\cyre\cyrc\cyri\cyra\cyrl\cyrsftsn\cyrn\cyro\cyrs\cyrt\cyrsftsn}
+\def\specialitysep{~}
+\def\specialitylabel{\specialityname\specialitysep}
+
+%Специализация
+\def\specname{\cyr\CYRS\cyrp\cyre\cyrc\cyri\cyra\cyrl\cyri\cyrz\cyra\cyrc\cyri\cyrya}
+\def\speclabel{\specname\specialitysep}
+
+%Руководитель курсовой работы
+\def\cwaname{\cyr\CYRR\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn\ %
+\cyrk\cyru\cyrr\cyrs\cyro\cyrv\cyro\cyrishrt\
+\cyrr\cyra\cyrb\cyro\cyrt\cyrery}
+\def\cwasep{}
+\def\cwalabel{\cwaname\cwasep}
+
+%Научный руководитель
+\def\saname{\cyr\CYRN\cyra\cyru\cyrch\cyrn\cyrery\cyrishrt\ %
+\cyrr\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn}
+\def\specsep{:}
+\def\salabel{\saname\specsep}
+\def\sasecondlabel{~}
+
+%Нормоконтролер
+\def\controlname{\cyr\CYRN\cyro\cyrr\cyrm\cyro\cyrk\cyro\cyrn\cyrt\cyrr\cyro\cyrl\cyre\cyrr}
+\def\controllabel{\controlname\specsep}
+
+%Магистерская программа
+\def\masterprogname{\cyr\CYRM\cyra\cyrg\cyri\cyrs\cyrt\cyre\cyrr\cyrs\cyrk\cyra\cyrya\ %
+\cyrp\cyrr\cyro\cyrg\cyrr\cyra\cyrm\cyrm\cyra}
+\def\masterprogsep{~}
+\def\masterproglabel{\masterprogname\masterprogsep}
+
+%Дата защиты
+\def\graddate{\cyr\CYRD\cyra\cyrt\cyra\ \cyrz\cyra\cyrshch\cyri\cyrt\cyrery}
+
+%Код, направление подготовки
+\def\gradcodename{\cyr\CYRK\cyro\cyrd,\ \cyrn\cyra\cyrp\cyrr\cyra\cyrv\cyrl\cyre\cyrn\cyri\cyre\ \cyrp\cyro\cyrd\cyrg\cyro\cyrt\cyro\cyrv\cyrk\cyri}
+\def\gradcodesep{:~}
+\def\gradcodelabel{\gradcodename\gradcodesep}
+
+\def\institution#1{\gdef\@institution{#1}}\institution{}
+\def\course#1{\gdef\@course{#1}}\course{}
+\def\profile#1{\gdef\@profile{#1}}\profile{}
+\def\speciality#1{\gdef\@speciality{#1}}\speciality{}
+\def\spec#1{\gdef\@spec{#1}}\spec{}
+\def\title#1{\gdef\@title{#1}}\title{}
+\def\topic#1{\gdef\@topic{#1}}\topic{}
+\def\author#1{\gdef\@author{#1}}\author{}
+\def\groupnumber#1{\gdef\@groupnumber{#1}}\groupnumber{}
+\def\city#1{\gdef\@city{#1}}\city{}
+\def\department#1{\gdef\@department{#1}}\department{}
+\def\chair#1{\gdef\@chair{#1}}\chair{}
+\def\apname#1{\gdef\@apname{#1}}\apname{}
+\def\control#1{\gdef\@control{#1}}\control{}
+\def\masterprog#1{\gdef\@masterprog{#1}}\masterprog{}
+\date{\number\year}
+\def\sa#1{\gdef\@sa{#1}}\sa{}
+\def\sasecond#1{\gdef\@sasecond{#1}}\sasecond{}
+\def\gradcode#1{\gdef\@gradcode{#1}}\gradcode{}
+%Реферат
+\newcommand\annotatename{\cyr\CYRR\cyre\cyrf\cyre\cyrr\cyra\cyrt}
+\newcommand\annotate{\nchapter{\annotatename}}
+%Введение
+\newcommand\introname{\cyr\CYRV\cyrv\cyre\cyrd\cyre\cyrn\cyri\cyre}
+\newcommand\intro{\nchapter{\introname}}
+%Заключение
+\newcommand\conclusionname{%
+\cyr\CYRZ\cyra\cyrk\cyrl\cyryu\cyrch\cyre\cyrn\cyri\cyre}
+\newcommand\conclusion{\nchapter{\conclusionname}}
+%Основная часть
+\newcommand\mainname{\cyr\CYRO\cyrs\cyrn\cyro\cyrv\cyrn\cyra\cyrya\ \cyrch\cyra\cyrs\cyrt\cyrsftsn}
+\newcommand\main{\nchapter{\mainname}}
+%Обозначения и сокращения
+\newcommand\defsname{\cyr\CYRO\cyrb\cyro\cyrz\cyrn\cyra\cyrch\cyre\cyrn\cyri\cyrya\ %
+\cyri\ %
+\cyrs\cyro\cyrk\cyrr\cyra\cyrshch\cyre\cyrn\cyri\cyrya}
+\newcommand\defs{\nchapter{\defsname}}
+
+\def\field#1
+{\parbox[b][15mm][t]{65mm}{
+  \csname #1label\endcsname\\
+  \csname @#1\endcsname}
+}
+
+\def\fieldcenter#1
+{\parbox[b][15mm][t]{65mm}{\centering
+  \csname #1label\endcsname\\
+  \csname @#1\endcsname}
+}
+
+\endinput
+%%
+%% End of file `titledefs.rtx'.

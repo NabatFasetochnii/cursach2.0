@@ -1,0 +1,52 @@
+%%
+%% This is file `specialist.rtx',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% specialist.dtx  (with options: `specialist')
+%% 
+%% Copyright (c) 2004-2010 Stanislav Kruchinin.
+%% All rights reserved.
+%% 
+%% This file is part of the disser package.
+%% 
+
+\ProvidesFile{specialist.rtx}
+
+\deflength\secondskip{2cm}
+\deflength\fifthskip{3cm}
+\ifx\@department\empty\chairlabel\@chair\else
+\departmentlabel\@department\par
+\fi
+
+\smallskip
+\begin{center}
+  {\topicfont{\@topic}\\[2mm]}
+  \specialitylabel\@spec~<<\@speciality>>\\[1mm]
+\end{center}
+
+\vskip\secondskip
+\noindent
+\begin{tabular}{l >{\hspace{8mm}}c}
+\parbox[b][15mm][t]{65mm}
+{ 
+\ifx\@department\empty\apposchair:\else
+\apposdep:
+\fi\\
+\@apname} & 
+\parbox[b][15mm][t]{65mm}
+{\centering\@title\\[2mm]
+\authorfont{\@author}}\\
+
+\rule{65mm}{0.4pt} & \rule{65mm}{0.4pt}\\[3mm]
+
+\field{control} & \protect\fieldcenter{sa} \\
+\rule{65mm}{0.4pt} & \rule{65mm}{0.4pt}\\[3mm]
+\ifx\@sasecond\empty\else&\fieldcenter{sasecond} \\ 
+& \rule{65mm}{0.4pt}
+%  \fi
+\end{tabular}
+\endinput
+%%
+%% End of file `specialist.rtx'.

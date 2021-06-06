@@ -1,0 +1,152 @@
+\documentclass[a4paper, 12pt, subf, href, coursework]{disser8}
+%% master -- for master thesis
+%% bachelor -- for bachelor thesis
+%% specialist -- for specialist diploma
+%% coursework -- for course work
+
+\usepackage{multirow} %объединение рядов по вертикале в таблицах
+%\usepackage{cmap} %делает возможным поиск и выделение символов в файле pdf
+\usepackage{longtable} %длинные таблицы
+\usepackage{array} % матрицы
+\usepackage{paralist} %пакет для невложенных нумерованных и ненумерованных списков, оформленных по требованиям госта
+\usepackage{enumitem} %если списки вложенные, то нужен вот этот пакет и три следующие за ним команды
+\AddEnumerateCounter{\asbuk}{\@asbuk}{щ}
+\setlist[1]{leftmargin=0cm,itemindent=\parindent}
+\setlist[2]{leftmargin=\parindent,listparindent=\parindent,itemindent=\parindent}
+%\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{epstopdf} % пакет для автоконвертации eps и ps картинок в pdf
+\epstopdfsetup{update,suffix=,prefersuffix=false}
+\AppendGraphicsExtensions{.ps}
+
+\usepackage[paperwidth=21cm,paperheight=29.7cm,left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry} % определение макета страницы
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc} % кодировка utf-8
+\usepackage[english,russian]{babel} % переносы для русского и английского языков
+%\usepackage{subfig} %пакет для картинок в картинке
+\usepackage{wasysym} %всякие символы
+%\usepackage{caption} %подписи к таблицам и рисункам
+\captionsetup[figure]{labelsep=endash,justification=justified,singlelinecheck=true,font=small}
+\captionsetup[table]{labelsep=endash,justification=justified,singlelinecheck=false,font=normalsize}
+
+%%%%%%%%%
+\usepackage{showkeys} %не забыть убрать в итоговой версии. Пакет для показа ссылок
+%%%%%%%%%
+%\usepackage{hyperref}
+%\usepackage{amsmath} %делает гиперссылки из ссылок
+\usepackage{mathtools}
+\usepackage{icomma} %умная запятая
+\usepackage{rmathbr} %пакет для переноса знака в конце строки
+\usepackage[normalem]{ulem}
+\usepackage{graphics} % картинки
+\usepackage{booktabs}
+\usepackage{textcomp} %пакет для того, чтобы безболезненно подчёркивать и переносить текст по строчкам
+\usepackage{eucal}[mathscr]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{lastpage} %пакет для того, чтобы узнать номер последней страницы
+%\usepackage{totcount} %пакет, чтобы считать штуки
+%
+%\regtotcounter{page} %страниц
+%\regtotcounter{figure} %рисунков
+%
+%\newtotcounter{citnum} %источников
+%\def\oldbibitem{}
+%\let\oldbibitem=\bibitem
+%\def\bibitem{\stepcounter{citnum}\oldbibitem}
+%
+%\newtotcounter{longtabcnt}
+%\def\oldltab{} \let\oldltab=\longtable
+%\def\longtable{\stepcounter{longtabcnt}\oldltab}
+%
+%\newtotcounter{foofigure}
+%\makeatletter
+%\renewenvironment{figure}[1][\fps@figure]{
+%\edef\@tempa{\noexpand\@float{figure}[1]}
+%\@tempa
+%\addtocounter{foofigure}{1}
+%}{
+%\end@float
+%}
+%\makeatother
+%
+%\newtotcounter{footable}
+%\makeatletter
+%\renewenvironment{table}[1][\fps@table]{
+%\edef\@tempa{\noexpand\@float{table}[1]}
+%\@tempa
+%\addtocounter{footable}{1}
+%}{
+%\end@float
+%}
+%\makeatother
+%
+%\newcounter{fulltabcnt}
+%
+%
+%
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+%\numberwithin{table}{section}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% правильная нумерация источников в списке литературы
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1}
+\makeatother
+\newcommand*{\pd}[3][]{\ensuremath{\frac{\partial^{#1} #2}{\partial #3}}}
+%нумерация разделов приложения заглавными русскими буквами
+\renewcommand\theappendix{\Asbuk{chapter}}
+\setcounter{tocdepth}{3}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\theenumi}{\asbuk{enumi}}
+\renewcommand{\theenumii}{\arabic{enumii}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{physics}
+
+
+\graphicspath{ {../figures/} }
+
+\begin{document}
+%    \nocite{*}
+
+    \input{common} %В этом файле лежат все команды для титульного листа
+
+    \input{journal} %В этом файле команды для названий журналов
+    \maketitle
+
+    \include{annotation} % раздел "РЕФЕРАТ"
+% ----------------------------------------------------------------
+    \newpage
+    \tableofcontents
+    \include{designation} % раздел "ОБОЗНАЧЕНИЯ И СОКРАЩЕНИЯ"
+% ----------------------------------------------------------------
+    \input{intro} % раздел "ВВЕДЕНИЕ"
+
+%\main % печатает заголовок "ОСНОВНАЯ ЧАСТЬ", не включается в курсовую работу
+    \newpage
+    \input{review} % раздел "Обзор литературы"
+%\include{2} % раздел "Постановка задачи работы", не включается в курсоваую работу
+
+%    \include{3} % раздел "Способы и методы теоретических и аналитических исследований"
+    \input{modeling.tex}
+
+%    \include{4} % раздел "Результаты и их обсуждение"
+    \input{analisis.tex}
+
+%    \input{concl} % раздел "ЗАКЛЮЧЕНИЕ"
+    \input{result.tex}
+
+    \bibliographystyle{Kourovkastyle.bst} %Стилевой файл для списка литературы в BibTeX
+    \bibliography{References} % подключение списка литературы, сделанного в формате .bib
+
+% ----------------------------------------------------------------
+    \appendix % Раздел с Приложениями
+
+    \include{appendix} % Файл с текстом приложения
+
+\end{document}

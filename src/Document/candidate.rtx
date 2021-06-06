@@ -1,0 +1,70 @@
+%%
+%% This is file `candidate.rtx',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% candidate.dtx  (with options: `candidate')
+%% 
+%% Copyright (c) 2004-2009 Stanislav Kruchinin.
+%% All rights reserved.
+%% 
+%% This file is part of the disser package.
+%% 
+
+\ProvidesFile{candidate.rtx}
+
+\newlength\firstskip
+\ifDis@libcat
+  \setlength\firstskip{2ex}
+\else
+  \setlength\firstskip{4ex}
+\fi
+\deflength\secondskip{2cm}
+\deflength\thirdskip{1cm}
+\deflength\fourthskip{1cm}
+\deflength\fifthskip{1cm}
+\deflength\sixthskip{0pt}
+
+\deflength\@sahshift{8cm}
+
+\def\titlefont{\normalsize}
+\def\topicfont{\Large\bfseries}
+\def\authorfont{\large}
+\def\specfont{\normalsize}
+
+\vskip\firstskip
+\normalfont
+\begin{flushright}
+  \asmanuscriptname\\
+  \ifDis@facsimile\facsimile\fi
+  \ifDis@libcat
+    {\libcatname\ \@libcatnum}
+  \fi
+\end{flushright}
+\begin{center}
+  \vskip\secondskip
+  {\authorfont\@author}
+  \vskip\thirdskip
+  {\topicfont\@topic\par}
+  \vskip\fourthskip
+  {\specfont\@specnum~--\ \@spec}
+  \vskip\fifthskip
+  {\titlefont\@title}
+\end{center}
+\vskip\sixthskip
+\begin{tabbing}
+  \hspace{\@sahshift}\={\salabel}\\
+  \>\@sastatus\\
+  \>\@sa
+\end{tabbing}
+
+%\vskip\sixthskip
+%\begin{tabbing}
+%  \hspace{\@sahshift}\={\conlabel}\\
+%  \>\@constatus\\
+%  \>\@con
+%\end{tabbing}
+\endinput
+%%
+%% End of file `candidate.rtx'.
