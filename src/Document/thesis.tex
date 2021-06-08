@@ -7,7 +7,7 @@
 \usepackage{multirow} %объединение рядов по вертикале в таблицах
 %\usepackage{cmap} %делает возможным поиск и выделение символов в файле pdf
 \usepackage{longtable} %длинные таблицы
-\usepackage{array} % матрицы
+%\usepackage{array} % матрицы
 \usepackage{paralist} %пакет для невложенных нумерованных и ненумерованных списков, оформленных по требованиям госта
 \usepackage{enumitem} %если списки вложенные, то нужен вот этот пакет и три следующие за ним команды
 \AddEnumerateCounter{\asbuk}{\@asbuk}{щ}
@@ -21,7 +21,7 @@
 \usepackage[paperwidth=21cm,paperheight=29.7cm,left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry} % определение макета страницы
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc} % кодировка utf-8
-\usepackage[english,russian]{babel} % переносы для русского и английского языков
+\usepackage[english, russian]{babel} % переносы для русского и английского языков
 %\usepackage{subfig} %пакет для картинок в картинке
 \usepackage{wasysym} %всякие символы
 %\usepackage{caption} %подписи к таблицам и рисункам
@@ -109,6 +109,7 @@
 \usepackage{physics}
 
 
+
 \graphicspath{ {../figures/} }
 
 \begin{document}
@@ -141,7 +142,7 @@
 %    \input{concl} % раздел "ЗАКЛЮЧЕНИЕ"
     \input{result.tex}
 
-    \bibliographystyle{Kourovkastyle.bst} %Стилевой файл для списка литературы в BibTeX
+    \bibliographystyle{Kourovkastyle} %Стилевой файл для списка литературы в BibTeX
     \bibliography{References} % подключение списка литературы, сделанного в формате .bib
 
 % ----------------------------------------------------------------
